@@ -1,9 +1,0 @@
-C:/Games/TankGame/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/TankGame.dir
-C:/Games/TankGame/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
-C:/Games/TankGame/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
-C:/Games/TankGame/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
-C:/Games/TankGame/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/install.dir
-C:/Games/TankGame/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
-C:/Games/TankGame/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
-C:/Games/TankGame/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/TankGame_autogen_timestamp_deps.dir
-C:/Games/TankGame/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/TankGame_autogen.dir
