@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/fonT.png</file>
+        <file>images/T64_5.gif</file>
+        <file>images/bullet.png</file>
+        <file>images/victory.png</file>
+    </qresource>
+</RCC>
