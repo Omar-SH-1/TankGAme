@@ -4,5 +4,6 @@
         <file>images/T64_5.gif</file>
         <file>images/bullet.png</file>
         <file>images/victory.png</file>
+        <file>images/menu.mp3</file>
     </qresource>
 </RCC>

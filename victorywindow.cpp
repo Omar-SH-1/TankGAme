@@ -6,7 +6,7 @@
 #include <QPixmap>
 
 VictoryWindow::VictoryWindow(QWidget *parent) : QMainWindow(parent) {
-    setFixedSize(800, 600);
+    setFixedSize(700, 800);
 
     QLabel *background = new QLabel(this);
     background->setPixmap(QPixmap(":/images/victory.png").scaled(size()));
@@ -14,11 +14,11 @@ VictoryWindow::VictoryWindow(QWidget *parent) : QMainWindow(parent) {
     background->lower();
 
     QPushButton *menuButton = new QPushButton("В меню", this);
-    menuButton->setGeometry(300, 400, 200, 50);
+    menuButton->setGeometry(250, 400, 200, 50);
     connect(menuButton, &QPushButton::clicked, this, &VictoryWindow::onMenuClicked);
 
     QPushButton *nextButton = new QPushButton("Следующий уровень", this);
-    nextButton->setGeometry(300, 470, 200, 50);
+    nextButton->setGeometry(250, 470, 200, 50);
     connect(nextButton, &QPushButton::clicked, this, &VictoryWindow::onNextLevelClicked);
 }
 

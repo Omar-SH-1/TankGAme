@@ -4,6 +4,8 @@
 #include <QLabel>
 #include <QPixmap>
 #include "gamewindow.h"
+#include <QMediaPlayer>
+#include <QAudioOutput>
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -11,6 +13,13 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow) {
     ui->setupUi(this);
     setFixedSize(900, 700);
+
+    QMediaPlayer *player = new QMediaPlayer(this);
+    QAudioOutput *audioOutput = new QAudioOutput(this);
+    player->setAudioOutput(audioOutput);
+    player->setSource(QUrl("qrc:/images/menu.mp3"));
+    audioOutput->setVolume(50); // громкость от 0 до 100
+    player->play();
 
     // Фон
     QLabel *background = new QLabel(this);
