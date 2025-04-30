@@ -4,6 +4,10 @@
 #include <QPushButton>
 #include <QLabel>
 #include <QPixmap>
+#include <QMediaPlayer>
+#include <QAudioOutput>
+
+
 
 VictoryWindow::VictoryWindow(QWidget *parent) : QMainWindow(parent) {
     setFixedSize(700, 800);
@@ -20,6 +24,13 @@ VictoryWindow::VictoryWindow(QWidget *parent) : QMainWindow(parent) {
     QPushButton *nextButton = new QPushButton("Следующий уровень", this);
     nextButton->setGeometry(250, 470, 200, 50);
     connect(nextButton, &QPushButton::clicked, this, &VictoryWindow::onNextLevelClicked);
+    QMediaPlayer *player = new QMediaPlayer(this);
+    QAudioOutput *audioOutput = new QAudioOutput(this);
+    player->setAudioOutput(audioOutput);
+    player->setSource(QUrl("qrc:/images/win.mp3"));
+    audioOutput->setVolume(50);
+    player->play();
+
 }
 
 void VictoryWindow::onMenuClicked() {
