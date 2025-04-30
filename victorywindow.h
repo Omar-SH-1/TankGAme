@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 
+
 class VictoryWindow : public QMainWindow {
     Q_OBJECT
 public:

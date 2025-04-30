@@ -1,9 +1,10 @@
 #include "gamewindow.h"
 #include <QGraphicsRectItem>
-#include "wall.h"
+//#include "wall.h"
 #include "enemy.h"
 #include <QMessageBox>
 #include "victorywindow.h"
+#include <QMediaPlayer>
 
 GameWindow::GameWindow(QWidget *parent) : QMainWindow(parent) {
     setFixedSize(800, 600);

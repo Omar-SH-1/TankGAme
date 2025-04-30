@@ -14,8 +14,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     setFixedSize(900, 700);
 
-    QMediaPlayer *player = new QMediaPlayer(this);
-    QAudioOutput *audioOutput = new QAudioOutput(this);
+    player = new QMediaPlayer(this);
+    audioOutput = new QAudioOutput(this);
     player->setAudioOutput(audioOutput);
     player->setSource(QUrl("qrc:/images/menu.mp3"));
     audioOutput->setVolume(50); // громкость от 0 до 100
@@ -45,7 +45,8 @@ MainWindow::~MainWindow() {
 void MainWindow::onPlayClicked() {
     GameWindow *game = new GameWindow();
     game->show();
-    this->close(); // Закрыть меню
+    this->close();    // Закрыть меню
+    player->stop();   // Выключить музыку меню
 }
 
 

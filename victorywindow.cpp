@@ -11,6 +11,12 @@
 
 VictoryWindow::VictoryWindow(QWidget *parent) : QMainWindow(parent) {
     setFixedSize(700, 800);
+    QMediaPlayer *player = new QMediaPlayer(this);
+    QAudioOutput *audioOutput = new QAudioOutput(this);
+    player->setAudioOutput(audioOutput);
+    player->setSource(QUrl("qrc:/images/win.mp3"));
+    audioOutput->setVolume(50); // громкость от 0 до 100
+    player->play();
 
     QLabel *background = new QLabel(this);
     background->setPixmap(QPixmap(":/images/victory.png").scaled(size()));
@@ -24,12 +30,7 @@ VictoryWindow::VictoryWindow(QWidget *parent) : QMainWindow(parent) {
     QPushButton *nextButton = new QPushButton("Следующий уровень", this);
     nextButton->setGeometry(250, 470, 200, 50);
     connect(nextButton, &QPushButton::clicked, this, &VictoryWindow::onNextLevelClicked);
-    QMediaPlayer *player = new QMediaPlayer(this);
-    QAudioOutput *audioOutput = new QAudioOutput(this);
-    player->setAudioOutput(audioOutput);
-    player->setSource(QUrl("qrc:/images/win.mp3"));
-    audioOutput->setVolume(50);
-    player->play();
+
 
 }
 
