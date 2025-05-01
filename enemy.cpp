@@ -7,6 +7,7 @@
 
 EnemyTank::EnemyTank() {
     setPixmap(QPixmap(":/images/T64_5.gif").scaled(100, 50));
+     setTransformOriginPoint(boundingRect().center());
     health = 50;
     actionTimer = new QTimer(this);
     connect(actionTimer, &QTimer::timeout, this, &EnemyTank::updateEnemy);
