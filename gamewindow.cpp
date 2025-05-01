@@ -60,6 +60,18 @@ void GameWindow::setupWalls() {
 
     Wall *wall5 = new Wall(500, 450, 200, 20);
     scene->addItem(wall5);
+
+    Wall *topWall = new Wall(0, 0, 800, 20); // верх
+    scene->addItem(topWall);
+
+    Wall *bottomWall = new Wall(0, 580, 800, 20); // низ
+    scene->addItem(bottomWall);
+
+    Wall *leftWall = new Wall(0, 0, 20, 600); // левая
+    scene->addItem(leftWall);
+
+    Wall *rightWall = new Wall(780, 0, 20, 600); // правая
+    scene->addItem(rightWall);
 }
 
 void GameWindow::enemyDied() {
