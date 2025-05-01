@@ -6,12 +6,15 @@
 #include "gamewindow.h"
 
 EnemyTank::EnemyTank() {
-    setPixmap(QPixmap(":/images/T64_5.gif").scaled(100, 50));
-     setTransformOriginPoint(boundingRect().center());
+    QPixmap tankPixmap(":/images/T64_5.gif");
+    QTransform transform;
+    transform.rotate(180);  // Поворачиваем изображение на 180°
+    setPixmap(tankPixmap.transformed(transform).scaled(100, 50));
+    setTransformOriginPoint(boundingRect().center());  // Вращение относительно центра
     health = 50;
     actionTimer = new QTimer(this);
     connect(actionTimer, &QTimer::timeout, this, &EnemyTank::updateEnemy);
-    actionTimer->start(200);
+    actionTimer->start(222);
 }
 
 void EnemyTank::setPlayer(PlayerTank *p) {
@@ -52,7 +55,7 @@ void EnemyTank::moveTowardsPlayer() {
 
 void EnemyTank::shoot() {
     if (!scene()) return;
-    Bullet *bullet = new Bullet(rotation(), this);
+    Bullet *bullet = new Bullet(rotation() + 180, this);
     scene()->addItem(bullet);
     bullet->setPos(pos() + QPointF(boundingRect().width() / 2, boundingRect().height() / 2));
 }
