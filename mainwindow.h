@@ -18,7 +18,6 @@ public:
 
 private slots:
     void onPlayClicked();
-    void onChooseTankClicked();
 
 private:
     Ui::MainWindow *ui;

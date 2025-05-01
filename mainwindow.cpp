@@ -33,9 +33,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(playButton, &QPushButton::clicked, this, &MainWindow::onPlayClicked);
 
     // Кнопка "Выбрать танк"
-    QPushButton *chooseButton = new QPushButton("Выбрать танк", this);
-    chooseButton->setGeometry(350, 470, 200, 50);
-    connect(chooseButton, &QPushButton::clicked, this, &MainWindow::onChooseTankClicked);
+    //QPushButton *chooseButton = new QPushButton("Выбрать танк", this);
+    //chooseButton->setGeometry(350, 470, 200, 50);
+    //connect(chooseButton, &QPushButton::clicked, this, &MainWindow::onChooseTankClicked);
 }
 
 MainWindow::~MainWindow() {
@@ -50,6 +50,4 @@ void MainWindow::onPlayClicked() {
 }
 
 
-void MainWindow::onChooseTankClicked() {
-    // Тут появится выбор танка
-}
+
