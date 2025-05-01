@@ -39,6 +39,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         bullet.cpp
         victorywindow.h
         victorywindow.cpp
+        losewindow.h
+        losewindow.cpp
 
 
 

@@ -10,7 +10,7 @@ EnemyTank::EnemyTank() {
     health = 50;
     actionTimer = new QTimer(this);
     connect(actionTimer, &QTimer::timeout, this, &EnemyTank::updateEnemy);
-    actionTimer->start(300);
+    actionTimer->start(200);
 }
 
 void EnemyTank::setPlayer(PlayerTank *p) {

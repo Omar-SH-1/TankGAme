@@ -6,5 +6,6 @@
         <file>images/victory.png</file>
         <file>images/win.mp3</file>
         <file>images/menu.mp3</file>
+        <file>images/lose.png</file>
     </qresource>
 </RCC>

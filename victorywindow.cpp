@@ -11,8 +11,8 @@
 
 VictoryWindow::VictoryWindow(QWidget *parent) : QMainWindow(parent) {
     setFixedSize(700, 800);
-    QMediaPlayer *player = new QMediaPlayer(this);
-    QAudioOutput *audioOutput = new QAudioOutput(this);
+    player = new QMediaPlayer(this);
+    audioOutput = new QAudioOutput(this);
     player->setAudioOutput(audioOutput);
     player->setSource(QUrl("qrc:/images/win.mp3"));
     audioOutput->setVolume(50); // громкость от 0 до 100
@@ -37,6 +37,7 @@ VictoryWindow::VictoryWindow(QWidget *parent) : QMainWindow(parent) {
 void VictoryWindow::onMenuClicked() {
     MainWindow *mainMenu = new MainWindow();
     mainMenu->show();
+    player->stop();
     this->close();
 }
 
@@ -44,5 +45,6 @@ void VictoryWindow::onNextLevelClicked() {
     // Можно заменить на GameWindow или другой уровень
     GameWindow *nextLevel = new GameWindow();
     nextLevel->show();
+    player->stop();
     this->close();
 }

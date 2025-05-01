@@ -3,6 +3,8 @@
 #include "wall.h"
 #include "bullet.h"
 #include <QGraphicsScene>
+#include "gamewindow.h"
+
 
 PlayerTank::PlayerTank() {
     setPixmap(QPixmap(":/images/T64_5.gif").scaled(100, 50));
@@ -63,12 +65,23 @@ void PlayerTank::keyReleaseEvent(QKeyEvent *event) {
         canShoot = true;
     }
 }
+void PlayerTank::setGameWindow(GameWindow* window) {
+    gameWindow = window;
+}
+int PlayerTank::getHealth() const {
+    return health;
+}
+
+
 void PlayerTank::takeDamage(int damage) {
     health -= damage;
     if (health <= 0) {
-        // Логика для смерти игрока, например:
+        if (gameWindow) gameWindow->showDefeatWindow();  // сначала окно
         scene()->removeItem(this);
-        delete this;
+        delete this;  // потом удаляем игрока
     }
 }
+
+
+
 

@@ -11,6 +11,8 @@ class GameWindow : public QMainWindow {
 public:
     explicit GameWindow(QWidget *parent = nullptr);
     void enemyDied();  // добавлено
+    void showDefeatWindow();
+
 
 private:
     QGraphicsScene *scene;
