@@ -7,5 +7,6 @@
         <file>images/win.mp3</file>
         <file>images/menu.mp3</file>
         <file>images/lose.png</file>
+        <file>images/lose.mp3</file>
     </qresource>
 </RCC>
